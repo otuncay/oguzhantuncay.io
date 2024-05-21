@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kişisel Web Sayfası</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f7;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #000;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #1d1d1f 3px solid;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            animation: fadeIn 2s;
+        }
+        header nav ul {
+            padding: 0;
+            list-style: none;
+            text-align: center;
+        }
+        header nav ul li {
+            display: inline;
+            padding: 0 20px;
+        }
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        .main {
+            padding: 20px;
+            background: #fff;
+            margin-top: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            animation: slideIn 1s;
+        }
+        .portfolio {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .portfolio img {
+            width: 30%;
+            margin-bottom: 20px;
+            transition: transform 0.3s;
+        }
+        .portfolio img:hover {
+            transform: scale(1.05);
+        }
+        footer {
+            background: #000;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+            position: relative;
+        }
+        .accent {
+            color: #0071e3;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="accent">Kişisel Web Sayfası</h1>
+        <nav>
+            <ul>
+                <li><a href="#biography">Biyografi</a></li>
+                <li><a href="#career">Kariyer</a></li>
+                <li><a href="#portfolio">Portföy</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section id="biography" class="main">
+            <h2 class="accent">Biyografi</h2>
+            <p>Buraya biyografiniz gelecek...</p>
+        </section>
+
+        <section id="career" class="main">
+            <h2 class="accent">Kariyer Bilgileri</h2>
+            <p>Buraya kariyer bilgileriniz gelecek...</p>
+        </section>
+
+        <section id="portfolio" class="main">
+            <h2 class="accent">Portföy</h2>
+            <div class="portfolio">
+                <img src="portfolio1.jpg" alt="Proje 1">
+                <img src="portfolio2.jpg" alt="Proje 2">
+                <img src="portfolio3.jpg" alt="Proje 3">
+                <!-- Portföyünüze ait resimleri buraya ekleyebilirsiniz -->
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>Kişisel Web Sayfası &copy; 2024</p>
+    </footer>
+</body>
+</html>
